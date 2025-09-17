@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="png" href="TNL logo.png">
+  <title>The News Loop</title>
+  <link rel="stylesheet" href="css/style.css">
+  
+  
+
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="TNL logo.png" alt="Logo">
+      <h1>The News Loop</h1>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="world.html">World</a></li>
+        <li><a href="sports.html">Sports</a></li>
+        <li><a href="education.html">Education</a></li>
+        <li><a href="tech.html">Technology</a></li>
+      </ul>
+      
+    </nav>
+  </header>
+    <!-- Hero -->
+  <section class="hero">
+    <h2>Welcome to <span>The News Loop</span></h2>
+    <p>Your source for the latest updates in World, Sports, Education, and Technology.</p>
+  </section>
+  <center>
+  <form id="searchForm">
+    <input type="search" id="searchInput" placeholder="Search..." required />
+    <button type="submit">Search</button>
+  </form>
+</center>
+
+<script>
+  document.getElementById('searchForm').addEventListener('submit', function(e) {
+    e.preventDefault(); 
+
+    const query = document.getElementById('searchInput').value.toLowerCase();
+
+    
+    if (query.includes('sport')) {
+      window.location.href = 'sports.html?query=' + encodeURIComponent(query);
+    } else if (query.includes('tech')) {
+      window.location.href = 'tech.html?query=' + encodeURIComponent(query);
+    } else if (query.includes('education')) {
+      window.location.href = 'education.html?query=' + encodeURIComponent(query);
+    } else if (query.includes('world')) {
+      window.location.href = 'world.html?query=' + encodeURIComponent(query);
+    } else {
+      alert('No results found for "' + query + '"');
+    }
+  });
+</script>
+
+
+  
+   <!-- Main Content -->
+  <main class="content">
+    <!-- News Articles -->
+    <section class="news">
+      <!-- Featured News -->
+      <article class="featured">
+        <img src="glb.png" alt="Global Summit 2025">
+        <div class="text">
+          <h2>Breaking News: Global Summit 2025</h2>
+          <p>World leaders gather to discuss climate change and economic growth. The conference aims to establish stronger international partnerships and sustainable goals worldwide.</p>
+        </div>
+      </article>
+
+      <!-- Other Headlines -->
+         <main class="container">        
+      <article class="headline">
+        <img src="https://www.aljazeera.com/wp-content/uploads/2025/03/AFP__20250309__36ZN97H__v2__HighRes__TopshotCricketCt2025IndNzl-1741541041.jpg?resize=1200%2C630" alt="Sports">
+        <div class="text">
+          <h3>Sports Update: Championship Final</h3>
+          <p>India beat New Zealand by four wickets
+India overcome New Zealand’s 251-7 to win by four wickets in the 2025 Champions Trophy final in Dubai.Half-centuries from Daryl Mitchell and Michael Bracewell earlier helped New Zealand, who won the toss and chose to bat first, put on 251-7 in 50 overs on a slow, two-paced Dubai wicket.
+
+India captain Sharma provided a fiery start to India’s innings, hitting seven fours and three sixes. Hardik Pandya scored 18, putting on a crucial 38 runs off 36 balls for the sixth wicket with Rahul.</p>
+        </main>
+      </div>
+      </article>
+
+      <article class="headline">
+        <img src="https://m.economictimes.com/thumb/msid-116786127,width-1600,height-900,resizemode-4,imgsize-64516/ai-.jpg" alt="Tech">
+        <div class="text">
+          <h3>Tech Spotlight: AI in 2025</h3>
+          <p>The Indian IT industry steps into 2025 with hope and optimism of improved tech spending and stronger deal pipeline as businesses across-the-board take bold AI bets, but all eyes are on global macroeconomic cues as well as the US'
+             stance on trade and high-skilled immigration as president-elect Donald Trump returns to White House next month.</p>
+        </div>
+      </article>
+
+      <article class="headline">
+        <img src="https://www.21kschool.com/in/wp-content/uploads/sites/4/2025/03/Objectives-of-New-Education-Policy.png" alt="Education">
+        <div class="text">
+          <h3>Education Reform: New Policies</h3>
+          <p>Governments worldwide introduce reforms to modernize education.In 2020 a new educational policy was announced known by the National Education Policy (NEP) 2020.Vocational education and skill development are the main goals of the New Education Policy 2024. The primary goal of India’s new education policy 2020 is to improve the country’s
+             educational system and swap out the outdated curriculum for the updated one</p>
+        </div>
+      </article>
+    </section>
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Trending Now</h3>
+      <ul>
+        <li><a href="world2.html">Elections 2025: What You Need to Know</a></li>
+        <li><a href="sport6.html">Sports: Championship Final Highlights</a></li>
+        <li><a href="tech2.html">Medicine: New Breakthrough in Medicine</a></li>
+        <li><a href="edu4.html">Education: Delhi schools showcase AI, murals, robots</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© 2025 The News Loop. All rights reserved.</p>
+  </footer>
+  <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+
+</body>
+</html>
